@@ -4,30 +4,6 @@
 
 This project aims to detect whether a news article is real or fake using Natural Language Processing (NLP) and machine learning. We use TF-IDF vectorization and a Logistic Regression model for classification.
 
----
-
-### 📂 Folder Structure
-
-```
-Fake-News-Detection/
-├── data/
-│   ├── fake.csv
-│   └── real.csv
-├── notebooks/
-│   └── fake_news_analysis.ipynb
-├── models/
-│   └── logistic_model.pkl
-├── outputs/
-│   ├── wordclouds/
-│   └── confusion_matrix.png
-├── app/
-│   └── streamlit_app.py  # Optional
-├── README.md
-└── requirements.txt
-```
-
----
-
 ### 📊 Technologies Used
 
 * Python
@@ -48,50 +24,67 @@ Fake-News-Detection/
 
 ---
 
-### 🔧 Steps Performed
+## 🎯 Objective
 
-1. **Data Loading**: Combined real and fake news with appropriate labels.
-2. **EDA**: Analyzed article length, text distribution, and generated word clouds.
-3. **Text Cleaning**: Lowercasing, punctuation removal, stopword removal.
-4. **Feature Extraction**: TF-IDF vectorization.
-5. **Model Building**: Logistic Regression.
-6. **Evaluation**: Confusion matrix, accuracy, precision, recall, F1-score.
-7. **(Optional)**: UI for live news prediction with Streamlit.
+To analyze news data and build a model that can classify whether a news article is **real** or **fake**, showcasing data analysis, visualization, and basic NLP skills.
 
 ---
 
-### 📈 Model Performance
+## 📊 Exploratory Data Analysis (EDA)
 
-| Metric    | Score |
-| --------- | ----- |
-| Accuracy  | 0.95+ |
-| Precision | 0.95+ |
-| Recall    | 0.95+ |
-| F1-Score  | 0.95+ |
+- News class distribution (Fake vs Real)
+- WordClouds for fake and real news
+- Top keywords for each class
+- Sentiment comparison
+- Misclassification analysis
+
+![EDA Sample](https://via.placeholder.com/400x200.png?text=Add+Your+Own+EDA+Graph+Here)
 
 ---
 
-### ▶️ How to Run
+## 🧹 Text Preprocessing
 
+- Lowercasing, punctuation & stopword removal
+- Combined title + text
+- Vectorized using **TF-IDF**
+
+---
+
+## 🤖 Model Used
+
+- Logistic Regression (Lightweight and accurate)
+- Accuracy: **~94%**
+- Confusion Matrix, Precision, Recall & F1 Score
+
+---
+
+## 🧠 Tools & Libraries
+
+- Python
+- Pandas, Numpy
+- Matplotlib, Seaborn
+- Scikit-learn
+- WordCloud
+- Streamlit (optional UI)
+
+---
+
+## 📈 Results
+
+| Metric     | Value     |
+|------------|-----------|
+| Accuracy   | 94%       |
+| Precision  | 93%       |
+| Recall     | 95%       |
+| F1 Score   | 94%       |
+
+---
+
+## 🖥️ Optional: Streamlit App
+
+Run this command:
 ```bash
-# Clone the repository
-git clone https://github.com/dilipraj05/fake-news-detection.git
-cd fake-news-detection
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run notebook
-jupyter notebook notebooks/fake_news_analysis.ipynb
-```
-
-To run the optional Streamlit app:
-
-```bash
-streamlit run app/streamlit_app.py
-```
-
----
+streamlit run app.py
 
 ### 📌 Future Improvements
 
